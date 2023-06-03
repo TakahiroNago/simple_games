@@ -7,8 +7,8 @@
     <div class="col-sm mt-4">
         <div class="row">
             <div class="col-sm">
-                <a href="<?=$path;?>auth/signup.php" class="btn btn-danger btn-sm float-end px-3 mb-2">Sign Up</a>
-                <a href="<?=$path;?>auth/signin.php" class="btn btn-primary btn-sm float-end px-3 me-2 mb-2">Sign In</a>
+                <a href="<?=$path;?>signup.php" class="btn btn-danger btn-sm float-end px-3 mb-2">Sign Up</a>
+                <a href="<?=$path;?>signin.php" class="btn btn-primary btn-sm float-end px-3 me-2 mb-2">Sign In</a>
             </div>
         </div>
     </div>

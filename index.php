@@ -1,3 +1,28 @@
+
+<?php
+    session_start();
+    if(isset($_SESSION['hl_highscore'])){
+        $hl_highScore = $_SESSION['hl_highscore'];
+				echo 1;
+    }elseif(isset($_SESSION['highlow'])){
+				$hl_highScore = $_SESSION['highlow'];
+				echo 2;
+		}else{
+				$hl_highScore = 0;
+				echo 3;
+		}
+    if(isset($_SESSION['f_highscore'])){
+        $f_highScore = $_SESSION['f_highscore'];
+				echo 4;
+    }elseif(isset($_SESSION['four'])){
+				$f_highScore = $_SESSION['four'];
+				echo 5;
+		}else{
+				$f_highScore = 0;
+				echo 6;
+		}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +43,6 @@
 
 <?php
 		$path = '';
-    session_start();
     if(isset($_SESSION['username'])){
         $username = $_SESSION['username'];
         require_once "header-user.php";
@@ -34,6 +58,7 @@
 												<img class="card-img-top" src="img/highlow.png" alt="High and Low">
 												<div class="card-body">
 														<h4 class="card-title">High and Low</h4>
+														<div class="h5">High Score: <?= $hl_highScore; ?></div>
 												</div>
 										</a>
 								</div>
@@ -44,6 +69,7 @@
 												<img class="card-img-top" src="img/four.png" alt="Four Blocks">
 												<div class="card-body">
 														<h4 class="card-title">Four Blocks</h4>
+														<div class="h5">High Score: <?= $f_highScore; ?></div>
 												</div>
 										</a>
 								</div>
@@ -61,7 +87,7 @@
         ?>
             <div class="row text-center mt-2">
                 <div class="col">
-                    <a href="auth/signin.php" class="btn btn-primary rounded py-1 float-end" style="text-decoration: none;">
+                    <a href="signin.php" class="btn btn-primary rounded py-1 float-end" style="text-decoration: none;">
                         Sign in, and save your high scores!
                     </a>
                 </div>

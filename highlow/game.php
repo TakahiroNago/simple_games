@@ -9,7 +9,7 @@
 		$_SESSION['csrf_token'] = $csrf_token;
 
     if(empty($_SESSION['rightcard'])){
-        header("location: highlow/index.php");
+        header("location: index.php");
     }else{
         $leftCard = $_SESSION['rightcard'];
         $cardSet = $_SESSION['cardset'];

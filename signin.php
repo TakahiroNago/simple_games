@@ -21,15 +21,19 @@
 <body>
 	<div class="container">
 		<?php
-		$path = '../';
-		require_once "../header-guest.php";
+		$path = '';
+    if(isset($_SESSION['username'])){
+				header("location:index.php");
+    }else{
+        require_once "header-guest.php";
+    }
 		?>
 		<div class="card w-25 mx-auto my-5">
 			<div class="card-header text-primary border-bottom-0 bg-white">
 				<h1 class="card-title display-6 text-center">Sign in</h1>
 			</div>
 			<div class="card-body">
-				<form action="contents/signin.php" method="post">
+				<form action="do-signin.php" method="post">
 					<div class="row mb-3">
 						<div class="col-sm">
 							<label for="username">Username</label>

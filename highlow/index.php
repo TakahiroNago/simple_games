@@ -129,7 +129,7 @@
                             <?php
                             if(empty($_SESSION['user_id']) && $highScore != 0){
                             ?>
-                            <a href="../auth/signin.php" style="text-decoration: none;">
+                            <a href="../signin.php" style="text-decoration: none;">
                                 <span class="fw-bold btn btn-primary">Sign in, and save your high score!</span>
                             </a>
                             <?php

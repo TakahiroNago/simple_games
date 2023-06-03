@@ -1,7 +1,7 @@
 <?php
 	session_start();
-	require_once "../../sql/connection.php";
-	require_once "functions.php";
+	require_once "sql/connection.php";
+	require_once "contents/functions.php";
 	if(isset($_POST['signin-btn'])){
 		$csrf_token = $_POST['csrf_token'];
 		$username = $_POST['username'];

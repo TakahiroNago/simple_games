@@ -21,15 +21,15 @@
 <body>
     <div class="container">
         <?php
-				$path = '../';
-				require_once "../header-guest.php";
+				$path = '';
+				require_once "header-guest.php";
 				?>
         <div class="card w-25 mx-auto my-5">
             <div class="card-header text-danger">
                 <h1 class="text-center display-6">Sign Up</h1>
             </div>
             <div class="card-body">
-                <form action="contents/signup.php" method="post">
+                <form action="do-signup.php" method="post">
                     <div class="row mb-3">
                         <div class="col-sm">
                             <label for="username" class="form-label">User Name</label>

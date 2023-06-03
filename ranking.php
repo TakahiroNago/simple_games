@@ -162,8 +162,8 @@
         ?>
         <div class="row text-center mt-4">
             <div class="col-sm">
-                <a href="auth/signin.php" class="btn btn-primary rounded py-1 float-end" style="text-decoration: none;">
-                    If you sign in, you can save your high scores!
+                <a href="signin.php" class="btn btn-primary rounded py-1 float-end" style="text-decoration: none;">
+                    Sign in, and save your high scores!
                 </a>
             </div>
         </div>

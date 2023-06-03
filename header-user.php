@@ -12,7 +12,7 @@
         </div>
         <div class="row">
             <div class="col-sm">
-                <a href="<?=$path;?>auth/signout.php" class="btn btn-danger btn-sm float-end px-3 me-2 mb-2">Sign Out</a>
+                <a href="<?=$path;?>signout.php" class="btn btn-danger btn-sm float-end px-3 me-2 mb-2">Sign Out</a>
             </div>
         </div>
     </div>

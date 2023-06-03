@@ -66,7 +66,7 @@
         $sqlCommand = "INSERT INTO users(username,password) VALUES('$username', '$password')";
 
         if($mysql -> query($sqlCommand)){
-            header("location: ../signin.php");
+            header("location: signin.php");
         }else{
             die("error in adding a user". $mysql->error);
         }
@@ -87,21 +87,21 @@
 									$_SESSION['highlow'] = $account['highlow'];
 									$_SESSION['four'] = $account['four'];
 
-									header('location:../../index.php');
+									header('location:index.php');
 							}else{
-								header('location:../signin.php');
+								header('location:signin.php');
 									?>
 									<p class="text-danger small fw-bold text-cetner">Incorrect Password</p>
 									<?php
 							}
 					}else{
-						header('location:../signin.php');
+						header('location:signin.php');
 							?>
 							<p class="text-danger small fw-bold text-cetner">User does not exist</p>
 							<?php
 					}
 			}else{
-				header('location:../signin.php');
+				header('location:signin.php');
 					?>
 					<p class="text-danger small fw-bold text-cetner">User does not exist</p>
 					<?php
