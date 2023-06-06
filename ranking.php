@@ -132,31 +132,6 @@
             </div>
         </div>
 
-        <div class="row">
-            <div class="col-sm text-center">
-                <table class="table table-hover mt-3">
-                    <tr>
-                        <td colspan="3" class="bg-secondary">
-                            <div>
-                                <a href="" class="text-white px-2 py-2 mt-3 fw-bold h4" style="text-decoration: none;">Comming Soon</a>
-                            </div>
-                        </td>
-                    </tr>
-                </table>
-            </div>
-            <div class="col-sm text-center">
-                <table class="table table-hover mt-3">
-                    <tr>
-                        <td colspan="3" class="bg-secondary">
-                            <div>
-                                <a href="" class="text-white px-2 py-2 mt-3 fw-bold h4" style="text-decoration: none;">Comming Soon</a>
-                            </div>
-                        </td>
-                    </tr>
-                </table>
-            </div>
-        </div>
-
         <?php
         if(empty($_SESSION['user_id'])){
         ?>
