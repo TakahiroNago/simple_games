@@ -3,23 +3,17 @@
     session_start();
     if(isset($_SESSION['hl_highscore'])){
         $hl_highScore = $_SESSION['hl_highscore'];
-				echo 1;
     }elseif(isset($_SESSION['highlow'])){
 				$hl_highScore = $_SESSION['highlow'];
-				echo 2;
 		}else{
 				$hl_highScore = 0;
-				echo 3;
 		}
     if(isset($_SESSION['f_highscore'])){
         $f_highScore = $_SESSION['f_highscore'];
-				echo 4;
     }elseif(isset($_SESSION['four'])){
 				$f_highScore = $_SESSION['four'];
-				echo 5;
 		}else{
 				$f_highScore = 0;
-				echo 6;
 		}
 ?>
 
