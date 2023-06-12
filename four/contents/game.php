@@ -150,8 +150,8 @@
 	}
 ?>
 
-	<div class="container mt-2">
-		<table class="float-end">
+	<div class="mt-2">
+		<table>
 			<?php
 				for($i = 1; $i <= $row; $i++){
 					?>

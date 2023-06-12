@@ -40,7 +40,7 @@
     <div class="container">
 
 <?php
-		$path = '../';
+		$game = 'highlow';
     if(isset($_SESSION['username'])){
         $username = $_SESSION['username'];
         require_once "../header-user.php";

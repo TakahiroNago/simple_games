@@ -72,7 +72,7 @@
         }
     }
 		
-    function signin($username, $password){
+    function signin($username, $password, $game){
 			$mysql = connection();
 
 			$sqlCommand = "SELECT * FROM users WHERE username = '$username'";
@@ -86,10 +86,14 @@
 									$_SESSION['username'] = $account['username'];
 									$_SESSION['highlow'] = $account['highlow'];
 									$_SESSION['four'] = $account['four'];
-									setcookie('login', true);
-									setcookie('username', $account['username']);
 
-									header('location:top.php');
+									if($game == 'four'){
+											header('location:four/index.php');
+									}elseif($game == 'highlow'){
+											header('location:highlow/index.php');
+									}else{
+											header('location:index.php');
+									}
 							}else{
 								header('location:signin.php');
 									?>

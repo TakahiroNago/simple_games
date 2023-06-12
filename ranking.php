@@ -16,16 +16,6 @@
 <body>
     <div class="container">
 
-<?php
-		$path = '';
-    session_start();
-    if(isset($_COOKIE['login']) && $_COOKIE['login']){
-        $username = $_COOKIE['username'];
-        require_once "header-user.php";
-    }else{
-        require_once "header-guest.php";
-    }
-?>
         <div class="row">
             <div class="col-sm">
                 <h3 class="text-center text-secondary mt-3">High Score Ranking</h3>
@@ -46,7 +36,9 @@
             $sqlCommand = "SELECT
                            highlow as 'score',
                            username as 'username'
-                           FROM users";
+                           FROM users
+													 ORDER BY highlow DESC
+													 LIMIT 10";
             $highLowScores = getScores($sqlCommand);
             arsort($highLowScores);
             $i = 0;
@@ -56,7 +48,7 @@
                 }elseif($i == 1){
                     $class = 'fw-bold text-primary h5';
                 }elseif($i == 2){
-                    $class = 'fw-bold text-success';
+                    $class = 'fw-bold text-warning';
                 }else{
                     $class = '';
                 }
@@ -74,9 +66,6 @@
                     </tr>
 <?php
                 $i++;
-                if($i == 10){
-                    break;
-                }
             }
 ?>
                 </table>
@@ -95,7 +84,9 @@
             $sqlCommand = "SELECT
                            four as 'score',
                            username as 'username'
-                           FROM users";
+                           FROM users
+													 ORDER BY four DESC
+													 LIMIT 10";
             $FourScores = getScores($sqlCommand);
             arsort($FourScores);
             $i = 0;
@@ -105,7 +96,7 @@
                 }elseif($i == 1){
                     $class = 'fw-bold text-primary h5';
                 }elseif($i == 2){
-                    $class = 'fw-bold text-success';
+                    $class = 'fw-bold text-warning';
                 }else{
                     $class = '';
                 }
@@ -123,28 +114,12 @@
                     </tr>
 <?php
                 $i++;
-                if($i == 10){
-                    break;
-                }
             }
 ?>
                 </table>
             </div>
         </div>
-
-        <?php 
-    		if(!isset($_COOKIE['login']) || (isset($_COOKIE['login']) && !$_COOKIE['login'])){
-        ?>
-        <div class="row text-center mt-4">
-            <div class="col-sm">
-                <a href="signin.php" class="btn btn-primary rounded py-1 float-end" style="text-decoration: none;">
-                    Sign in, and save your high scores!
-                </a>
-            </div>
-        </div>
-        <?php
-        }
-        ?>
+				<a href="index.php" class="btn btn-secondary float-end">TOP PAGE</a>
 
     </div>
 

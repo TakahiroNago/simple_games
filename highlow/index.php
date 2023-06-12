@@ -62,7 +62,7 @@
     <div class="container">
              
 <?php
-		$path = '../';
+		$game = 'highlow';
     if(isset($_SESSION['username'])){
         $username = $_SESSION['username'];
         require_once "../header-user.php";
@@ -71,10 +71,10 @@
     }
 ?>
 
-<h2 class="text-center my-3">High and Low Game</h2>
-        <div class="row bg-success py-5">
+				<h2 class="text-center my-3">High and Low Game</h2>
+        <div class="row bg-success py-5 d-flex justify-content-center">
 
-            <div class="col-sm">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 my-2">
                 <div class="card mx-auto" style="width: 200px;">
                     <div class="row h-25">
                         <span class="text-start text-<?= cardColor($indexLeft); ?> h4 mb-4 ms-2">
@@ -94,7 +94,7 @@
                 </div>
             </div>
 
-            <div class="col-sm">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 my-2">
                 <div class="card mx-auto" style="width: 200px;">
                     <div class="row h-25">
                         <span class="text-start text-<?= cardColor($indexRight); ?> h4 mb-4 ms-2">
@@ -117,33 +117,33 @@
         </div>
         <div class="row text-center mt-4">
 
-            <div class="col-sm-8">
+            <div class="col-sm">
                 <div class="row">
                     <div class="col-sm">
-                        <div class="row">
-														<a href="game.php">
-																<span class="btn btn-danger px-3 me-2 float-end">Game Start</span>
-														</a>
-                        </div>
-                        <div class="row text-end mt-2">
-                            <?php
-                            if(empty($_SESSION['user_id']) && $highScore != 0){
-                            ?>
-                            <a href="../signin.php" style="text-decoration: none;">
-                                <span class="fw-bold btn btn-primary">Sign in, and save your high score!</span>
-                            </a>
-                            <?php
-                            }
-                            ?>
-                        </div>
-                    </div>
-                    <div class="col-sm">
-												<a href="../top.php" class="btn btn-secondary">TOP PAGE</a>
+													<a href="game.php">
+															<span class="btn btn-danger px-3 ms-2 float-end">Game Start</span>
+													</a>
+													<a href="../index.php">
+															<span class="btn btn-secondary px-3 ms-2 float-end">TOP PAGE</span>
+													</a>
                     </div>
                 </div>
-            </div>
+								
+								<?php
+								if(empty($_SESSION['user_id']) && $highScore != 0){
+								?>
+										<div class="row">
+												<form action="../signin.php" method="post">
+														<input type="hidden" value="<?=$game?>" name="game">
+														<button type="submit" class="btn btn-primary float-end mt-2">Sign in, and save your high score!</button>
+												</form>
+										</div>
+								<?php
+								}
+								?>
+						</div>
 
-            <div class="col-sm text-start">
+            <div class="col-sm text-start ms-3">
                 <div class="h5 mt-3">Score: <?= $score; ?></div>
                 <div class="h5">High Score: <?= $highScore; ?></div>
             </div>

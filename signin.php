@@ -21,13 +21,17 @@
 <body>
 	<div class="container">
 		<?php
-		$path = '';
     if(isset($_SESSION['username'])){
-				header("location:top.php");
-    }else{
-        require_once "header-guest.php";
+				header("location:index.php");
     }
 		?>
+		<div class="row mt-3">
+				<div class="col col-sm-12 col-md-6 mx-auto bg-info rounded">
+						<a href="index.php" style="text-decoration: none;">
+								<h1 class="text-center my-3 text-white h1">Simple Games</h1>
+						</a>
+				</div>
+		</div>
 		<div class="card w-25 mx-auto my-5">
 			<div class="card-header text-primary border-bottom-0 bg-white">
 				<h1 class="card-title display-6 text-center">Sign in</h1>
@@ -53,6 +57,13 @@
 						</div>
 					</div>
 					<input type="hidden" name="csrf_token" value="<?=$csrf_token?>">
+<?php
+		if(isset($_POST['game'])){
+?>
+					<input type="hidden" name="game" value="<?=$_POST['game']?>">
+<?php
+		}
+?>
 				</form>
 			</div>
 		</div>

@@ -20,10 +20,13 @@
 </head>
 <body>
     <div class="container">
-        <?php
-				$path = '';
-				require_once "header-guest.php";
-				?>
+				<div class="row mt-3">
+						<div class="col col-sm-12 col-md-6 mx-auto bg-info rounded">
+								<a href="index.php" style="text-decoration: none;">
+										<h1 class="text-center my-3 text-white h1">Simple Games</h1>
+								</a>
+						</div>
+				</div>
         <div class="card w-25 mx-auto my-5">
             <div class="card-header text-danger">
                 <h1 class="text-center display-6">Sign Up</h1>

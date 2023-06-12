@@ -17,19 +17,39 @@
     <div class="container mx-auto">
 
 				<div class="row mt-3">
-						<div class="col col-sm-6 mx-auto bg-info rounded">
+						<div class="col col-sm-12 col-md-6 mx-auto bg-info rounded">
 								<a href="index.php" style="text-decoration: none;">
 										<h1 class="text-center my-3 text-white h1">Simple Games</h1>
 								</a>
 						</div>
 				</div>
         
+        <div class="row mt-3 d-flex justify-content-center">
+            <div class="col-12 col-sm-6 col-md-3 text-center mt-3 d-flex justify-content-center">
+								<div class="card">
+                		<a href="highlow/index.php" class="text-decoration-none link-hover">
+												<img class="card-img-top" src="img/highlow.png" alt="High and Low">
+												<div class="card-body">
+														<h4 class="card-title">High and Low</h4>
+												</div>
+										</a>
+								</div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3 text-center mt-3 d-flex justify-content-center">
+								<div class="card">
+                		<a href="four/index.php" class="text-decoration-none link-hover">
+												<img class="card-img-top" src="img/four.png" alt="Four Blocks">
+												<div class="card-body">
+														<h4 class="card-title">Four Blocks</h4>
+												</div>
+										</a>
+								</div>
+            </div>
+        </div>
+
         <div class="row">
-            <div class="col col-sm-6 mx-auto">
-								<a href="top.php" class="btn btn-success form-control mt-5">Start</a>
-								<a href="signin.php" class="btn btn-primary form-control mt-5">Sign In</a>
-								<a href="signup.php" class="btn btn-danger form-control mt-3">Sign Up</a>
-                <a href="ranking.php" class="btn btn-warning form-control mt-3">High Score Ranking</a>
+            <div class="col col-sm-12 col-md-6 mx-auto">
+                <a href="ranking.php" class="btn btn-warning text-white form-control mt-3">High Score Ranking</a>
             </div>
         </div>
 
