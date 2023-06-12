@@ -89,7 +89,7 @@
 									setcookie('login', true);
 									setcookie('username', $account['username']);
 
-									header('location:index.php');
+									header('location:top.php');
 							}else{
 								header('location:signin.php');
 									?>

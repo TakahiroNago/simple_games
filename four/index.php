@@ -166,7 +166,7 @@
 		</div>
 
     <div class="container w-50 mx-auto text-center">
-      <a href="../index.php" class="btn btn-secondary my-3">TOP PAGE</a>
+      <a href="../top.php" class="btn btn-secondary my-3">TOP PAGE</a>
     </div>
    
 	</div>

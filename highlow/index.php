@@ -138,7 +138,7 @@
                         </div>
                     </div>
                     <div class="col-sm">
-												<a href="../index.php" class="btn btn-secondary">TOP PAGE</a>
+												<a href="../top.php" class="btn btn-secondary">TOP PAGE</a>
                     </div>
                 </div>
             </div>

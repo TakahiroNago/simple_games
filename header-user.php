@@ -1,6 +1,6 @@
 <div class="row bg-primary">
     <div class="col-sm-6">
-        <a href="<?=$path;?>index.php" style="text-decoration: none;">
+        <a href="<?=$path;?>top.php" style="text-decoration: none;">
             <h1 class="text-center my-3 text-white h1">Simple Games</h1>
         </a>
     </div>
