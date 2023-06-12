@@ -23,7 +23,7 @@
 		<?php
 		$path = '';
     if(isset($_SESSION['username'])){
-				header("location:index.php");
+				header("location:top.php");
     }else{
         require_once "header-guest.php";
     }
