@@ -138,7 +138,7 @@
                         </div>
                     </div>
                     <div class="col-sm">
-                        <a href="../index.php" class="btn btn-secondary px-3 ms-2 float-start">Top Page</a>
+												<a href="../index.php" class="btn btn-secondary">TOP PAGE</a>
                     </div>
                 </div>
             </div>

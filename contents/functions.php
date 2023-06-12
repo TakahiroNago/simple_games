@@ -86,6 +86,8 @@
 									$_SESSION['username'] = $account['username'];
 									$_SESSION['highlow'] = $account['highlow'];
 									$_SESSION['four'] = $account['four'];
+									setcookie('login', true);
+									setcookie('username', $account['username']);
 
 									header('location:index.php');
 							}else{

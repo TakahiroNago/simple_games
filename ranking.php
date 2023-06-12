@@ -19,8 +19,8 @@
 <?php
 		$path = '';
     session_start();
-    if(isset($_SESSION['username'])){
-        $username = $_SESSION['username'];
+    if(isset($_COOKIE['login']) && $_COOKIE['login']){
+        $username = $_COOKIE['username'];
         require_once "header-user.php";
     }else{
         require_once "header-guest.php";
@@ -132,8 +132,8 @@
             </div>
         </div>
 
-        <?php
-        if(empty($_SESSION['user_id'])){
+        <?php 
+    		if(!isset($_COOKIE['login']) || (isset($_COOKIE['login']) && !$_COOKIE['login'])){
         ?>
         <div class="row text-center mt-4">
             <div class="col-sm">
