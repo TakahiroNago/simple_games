@@ -25,7 +25,7 @@
 		$game_over = false;
 
 		// response to button
-		if(isset($_POST['rotate-ccw']) || isset($_POST['rotate-cw']) || isset($_POST['left']) || isset($_POST['right']) || isset($_POST['down']) || isset($_POST['stay'])){
+		if(isset($_POST['rotate-ccw']) || isset($_POST['rotate-cw']) || isset($_POST['left']) || isset($_POST['right']) || isset($_POST['down']) || isset($_POST['stay'])  || isset($_POST['finish'])){
 
 			// check if movable
 			if(isset($_POST['rotate-ccw'])){
@@ -66,19 +66,35 @@
 				$tmp_down += 1;
 			}
 
+			// if down button is pushed, move the block close to the bottom
+			$tmp_go_down = true;
 			if(isset($_POST['down'])){
-					while($go_down){
-						for($i = 0; $i < 4; $i++){
-							if($blocks[$shape[$tmp_rotate][$i][0] + $tmp_down + 1][$shape[$tmp_rotate][$i][1] + $tmp_x_move]['solid']){
-								$go_down = false;
-							}
-						}
-						if($go_down){
-							$tmp_down += 1;
+				while($tmp_go_down){
+					for($i = 0; $i < 4; $i++){
+						if($blocks[$shape[$tmp_rotate][$i][0] + $tmp_down + 1][$shape[$tmp_rotate][$i][1] + $tmp_x_move]['solid']){
+							$tmp_go_down = false;
 						}
 					}
+					if($tmp_go_down){
+						$tmp_down += 1;
+					}
+				}
 			}
 			
+			// if finish button is pushed, move the block to the bottom
+			if(isset($_POST['finish'])){
+				while($go_down){
+					for($i = 0; $i < 4; $i++){
+						if($blocks[$shape[$tmp_rotate][$i][0] + $tmp_down + 1][$shape[$tmp_rotate][$i][1] + $tmp_x_move]['solid']){
+							$go_down = false;
+						}
+					}
+					if($go_down){
+						$tmp_down += 1;
+					}
+				}
+			}
+
 			// insert the moved block data to $blocks
 			$blocks = moveBlock($shape, $color, $rotate, $x_move, $down, $blocks, $tmp_rotate, $tmp_x_move, $tmp_down);
 

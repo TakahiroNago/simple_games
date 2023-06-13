@@ -116,8 +116,8 @@ function removeLine($blocks, $col, $rowRemoved){
 
 function setBlocks($row, $col){
   $blocks = array();
-  for($i = 0; $i <= $row; $i++){
-    for($j = 0; $j <= $col + 1; $j++){
+  for($i = 0; $i <= $row + 2; $i++){
+    for($j = 0; $j <= $col + 2; $j++){
       $blocks[$i][$j] = ['solid' => false, 'color' => 'white'];
     }
   }

@@ -3,7 +3,7 @@
 	require "contents/functions.php";
 	require "../sql/connection.php";
 	
-	if(isset($_POST['rotate-ccw']) || isset($_POST['rotate-cw']) || isset($_POST['left']) || isset($_POST['right']) || isset($_POST['down']) || isset($_POST['stay'])){
+	if(isset($_POST['rotate-ccw']) || isset($_POST['rotate-cw']) || isset($_POST['left']) || isset($_POST['right']) || isset($_POST['down']) || isset($_POST['stay']) || isset($_POST['finish'])){
 		$csrf_token = $_POST['csrf_token'];
 		checkCSRF($csrf_token);
 	}
@@ -32,7 +32,7 @@
 
 
 	<body>
-		<div class="container">
+		<div class="container site-container">
 							
 	<?php
 		$game = 'four';
@@ -47,12 +47,12 @@
 			<h2 class="text-center mt-3">Four Blocks</h2>
 			<div class="container">
 				<div class="row mx-auto d-flex justify-content-center">
-					<div class="col col-sm-6 col-md-4 col-lg-3 col-xl-2 d-flex justify-content-center no-margin">
+					<div class="col col-sm-5 col-md-4 d-flex justify-content-center no-margin">
 						<?php
 						require "contents/game.php";
 						?>
 					</div>
-					<div class="col col-sm-6 col-md-4 col-lg-3 col-xl-2 d-flex justify-content-center">
+					<div class="col col-sm-5 col-md-4 d-flex justify-content-center">
 
 						<table class="text-center">
 
@@ -106,7 +106,7 @@
 											<i class="fa-solid fa-arrow-left"></i>
 										</button>
 										<button type="submit" class="btn btn-outline-danger btn-sm" name="stay">
-											<i class="fa-solid fa-arrow-down"></i>
+											<i class="fa-solid fa-chevron-down"></i>
 										</button>
 										<button type="submit" class="btn btn-outline-danger btn-sm" name="right">
 											<i class="fa-solid fa-arrow-right"></i>
@@ -122,6 +122,14 @@
 									</td>
 								</tr>
 				
+								<tr>
+									<td>
+										<button type="submit" class="btn btn-outline-danger" name="finish">
+										<i class="fa-solid fa-arrows-down-to-line"></i>
+										</button>
+									</td>
+								</tr>
+
 							<?php
 							if(!($game_over)){
 							?>
