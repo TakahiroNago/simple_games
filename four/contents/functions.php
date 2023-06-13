@@ -93,6 +93,19 @@ function checkGameOver($shape, $rotate, $x_move, $down, $blocks){
   return $over;
 }
 
+function moveToBottom($go_down, $blocks, $shape, $tmp_rotate, $tmp_x_move, $tmp_down){
+	while($go_down){
+		for($i = 0; $i < 4; $i++){
+			if($blocks[$shape[$tmp_rotate][$i][0] + $tmp_down + 1][$shape[$tmp_rotate][$i][1] + $tmp_x_move]['solid']){
+				$go_down = false;
+			}
+		}
+		if($go_down){
+			$tmp_down += 1;
+		}
+	}
+	return $tmp_down;
+}
 
 function moveBlock($shape, $color, $rotate, $x_move, $down, $blocks, $tmp_rotate, $tmp_x_move, $tmp_down){
   for($i = 0; $i < 4; $i++){
@@ -121,12 +134,14 @@ function setBlocks($row, $col){
       $blocks[$i][$j] = ['solid' => false, 'color' => 'white'];
     }
   }
-  for($i = 1; $i <= $col; $i++){
+  for($i = 0; $i <= $col + 2; $i++){
     $blocks[$row + 1][$i] = ['solid' => true, 'color' => 'white'];
+    $blocks[$row + 2][$i] = ['solid' => true, 'color' => 'white'];
   }
   for($i = 1; $i <= $row; $i++){
     $blocks[$i][0] = ['solid' => true, 'color' => 'white'];
     $blocks[$i][$col + 1] = ['solid' => true, 'color' => 'white'];
+    $blocks[$i][$col + 2] = ['solid' => true, 'color' => 'white'];
   }
 
   return $blocks;

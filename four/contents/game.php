@@ -63,36 +63,19 @@
 				}
 			}
 			if($go_down){
-				$tmp_down += 1;
+				$tmp_down++;
 			}
 
 			// if down button is pushed, move the block close to the bottom
 			$tmp_go_down = true;
 			if(isset($_POST['down'])){
-				while($tmp_go_down){
-					for($i = 0; $i < 4; $i++){
-						if($blocks[$shape[$tmp_rotate][$i][0] + $tmp_down + 1][$shape[$tmp_rotate][$i][1] + $tmp_x_move]['solid']){
-							$tmp_go_down = false;
-						}
-					}
-					if($tmp_go_down){
-						$tmp_down += 1;
-					}
-				}
+				$tmp_down = moveToBottom($tmp_go_down, $blocks, $shape, $tmp_rotate, $tmp_x_move, $tmp_down);
 			}
 			
 			// if finish button is pushed, move the block to the bottom
 			if(isset($_POST['finish'])){
-				while($go_down){
-					for($i = 0; $i < 4; $i++){
-						if($blocks[$shape[$tmp_rotate][$i][0] + $tmp_down + 1][$shape[$tmp_rotate][$i][1] + $tmp_x_move]['solid']){
-							$go_down = false;
-						}
-					}
-					if($go_down){
-						$tmp_down += 1;
-					}
-				}
+				$tmp_down = moveToBottom($go_down, $blocks, $shape, $tmp_rotate, $tmp_x_move, $tmp_down);
+				$go_down = false;
 			}
 
 			// insert the moved block data to $blocks
