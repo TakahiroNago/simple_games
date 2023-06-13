@@ -30,7 +30,7 @@
                 		<a href="highlow/index.php" class="text-decoration-none link-hover">
 												<img class="card-img-top" src="img/highlow.png" alt="High and Low">
 												<div class="card-body">
-														<h4 class="card-title">High and Low</h4>
+														<div class="card-title h4 text-info">High and Low</div>
 												</div>
 										</a>
 								</div>
@@ -40,7 +40,7 @@
                 		<a href="four/index.php" class="text-decoration-none link-hover">
 												<img class="card-img-top" src="img/four.png" alt="Four Blocks">
 												<div class="card-body">
-														<h4 class="card-title">Four Blocks</h4>
+														<div class="card-title h4 text-info">Four Blocks</div>
 												</div>
 										</a>
 								</div>

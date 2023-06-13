@@ -58,7 +58,7 @@
 
 							<tr>
 								<td>
-									<div class="mt-2">
+									<div>
 										<div class="fw-bold ">Next Block</div>
 										<table class="mx-auto">
 											<?php
@@ -91,10 +91,10 @@
 
 								<tr>
 									<td>
-										<button type="submit" class="btn btn-outline-danger mt-4 btn-sm" name="rotate-ccw">
+										<button type="submit" class="btn btn-outline-danger mt-3 btn-sm" name="rotate-ccw">
 											<i class="fa-solid fa-rotate-left"></i>
 										</button>
-										<button type="submit" class="btn btn-outline-danger mt-4 btn-sm" name="rotate-cw">
+										<button type="submit" class="btn btn-outline-danger mt-3 btn-sm" name="rotate-cw">
 											<i class="fa-solid fa-rotate-right"></i>
 										</button>
 									</td>
@@ -149,7 +149,7 @@
 
 							<tr>
 								<td>
-									<div class="h5 mt-2">
+									<div class="h6 mt-2">
 										Score: <?= "$score"; ?>
 									</div>
 								</td>
@@ -157,7 +157,7 @@
 
 							<tr>
 								<td>
-									<div class="h5">
+									<div class="h6">
 										High Score: <?= "$high_score". " "; ?>
 									</div>
 								</td>
@@ -172,7 +172,7 @@
 			<?php
 			if($game_over){
 			?>
-			<h2 class="text-center text-danger my-2">Game Over</h2>
+			<div class="text-center text-danger my-2 h3">Game Over</div>
 			<?php
 			}
 			?>
