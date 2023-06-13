@@ -43,13 +43,13 @@
 					<div class="row mb-3">
 						<div class="col-sm">
 							<label for="username">Username</label>
-							<input type="text" name="username" id="username" class="form-control">
+							<input type="text" name="username" id="username" class="form-control" required>
 						</div>
 					</div>
 					<div class="row mb-3">
 						<div class="col-sm">
 							<label for="username">Password</label>
-							<input type="password" name="password" id="password" class="form-control">
+							<input type="password" name="password" id="password" class="form-control" required>
 						</div>
 					</div>
 					<div class="row text-center">
