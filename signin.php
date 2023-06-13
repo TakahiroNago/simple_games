@@ -15,24 +15,26 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Sign in</title>
+	<!-- stylesheet -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+	<link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
-	<div class="container">
+	<div class="site-container mx-auto">
 		<?php
     if(isset($_SESSION['username'])){
 				header("location:index.php");
     }
 		?>
 		<div class="row mt-3">
-				<div class="col col-sm-12 col-md-6 mx-auto bg-info rounded">
-						<a href="index.php" style="text-decoration: none;">
-								<h1 class="text-center my-3 text-white h1">Simple Games</h1>
+				<div class="col mx-auto bg-info rounded">
+						<a href="index.php" class="text-decoration-none">
+								<h1 class="text-center my-3 text-white h2">Simple Games</h1>
 						</a>
 				</div>
 		</div>
-		<div class="card w-25 mx-auto my-5">
+		<div class="card card-user mx-auto my-5">
 			<div class="card-header text-primary border-bottom-0 bg-white">
 				<h1 class="card-title display-6 text-center">Sign in</h1>
 			</div>

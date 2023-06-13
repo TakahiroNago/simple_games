@@ -4,7 +4,7 @@
 	require "../sql/connection.php";
 	
 	// Generate a random binary and convert it to an ASCII string by converting it to hex
-	$toke_byte = openssl_random_pseudo_bytes(16);
+	$toke_byte = random_bytes(16);
 	$csrf_token = bin2hex($toke_byte);
 	// save token into session
 	$_SESSION['csrf_token'] = $csrf_token;
@@ -22,7 +22,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	
 	<!-- stylesheet -->
-	<link href="css/style.css" rel="stylesheet">
+	<link href="../css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -65,7 +65,7 @@
   }  
 ?>
 
-		<h2 class="text-center mt-3">FOUR BLOCKS</h2>
+		<h2 class="text-center mt-3">Four Blocks</h2>
 		<div class="container">
 			<div class="row mx-auto d-flex justify-content-center">
 				<div class="col col-sm-6 col-md-4 col-lg-3 col-xl-2 d-flex justify-content-center no-margin">
@@ -80,7 +80,7 @@
             <tr>
               <td>
                 <div class="mt-2">
-                  <div class="fw-bold">NEXT BLOCK</div>
+                  <div class="fw-bold">Next Block</div>
                   <table class="mx-auto">
                     <?php
                       for($i = 0; $i < 4; $i++){
@@ -106,10 +106,10 @@
 
               <tr>
                 <td>
-                  <button type="submit" class="btn btn-outline-danger mt-4" name="rotate-ccw">
+                  <button type="submit" class="btn btn-outline-danger mt-4 btn-sm" name="rotate-ccw">
                     <i class="fa-solid fa-rotate-left"></i>
                   </button>
-                  <button type="submit" class="btn btn-outline-danger mt-4" name="rotate-cw">
+                  <button type="submit" class="btn btn-outline-danger mt-4 btn-sm" name="rotate-cw">
                     <i class="fa-solid fa-rotate-right"></i>
                   </button>
                 </td>
@@ -117,13 +117,13 @@
               
               <tr>
                 <td>
-                  <button type="submit" class="btn btn-outline-danger" name="left">
+                  <button type="submit" class="btn btn-outline-danger btn-sm" name="left">
                     <i class="fa-solid fa-arrow-left"></i>
                   </button>
                   <button type="submit" class="btn btn-outline-danger btn-sm" name="stay">
                     <i class="fa-solid fa-arrow-down"></i>
                   </button>
-                  <button type="submit" class="btn btn-outline-danger" name="right">
+                  <button type="submit" class="btn btn-outline-danger btn-sm" name="right">
                     <i class="fa-solid fa-arrow-right"></i>
                   </button>
                 </td>
@@ -131,7 +131,7 @@
 
               <tr>
                 <td>
-                  <button type="submit" class="btn btn-outline-danger" name="down">
+                  <button type="submit" class="btn btn-outline-danger btn-sm" name="down">
                     <i class="fa-solid fa-arrow-down"></i><i class="fa-solid fa-arrow-down"></i>
                   </button>
                 </td>
@@ -139,7 +139,7 @@
 
               <tr>
                 <td>
-                  <button type="submit" class="btn btn-danger mt-3" name="start">START</button>
+                  <button type="submit" class="btn btn-danger mt-3" name="start">Start</button>
                 </td>
               </tr>
               
@@ -169,7 +169,7 @@
 		</div>
 
     <div class="container mx-auto text-center">
-      <a href="../index.php" class="btn btn-secondary my-3">TOP PAGE</a>
+      <a href="../index.php" class="btn btn-secondary my-3">Top Page</a>
 			<?php
 			if(empty($_SESSION['user_id']) && $high_score != 0){
 			?>

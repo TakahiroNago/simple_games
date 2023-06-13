@@ -25,6 +25,9 @@
 
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		
+		<!-- stylesheet -->
+		<link href="../css/style.css" rel="stylesheet">
 	</head>
 
 
@@ -41,23 +44,23 @@
 		} 
 	?>
 
-			<h2 class="text-center my-3">FOUR BLOCKS</h2>
+			<h2 class="text-center mt-3">Four Blocks</h2>
 			<div class="container">
-				<div class="row">
-					<div class="col-sm">
+				<div class="row mx-auto d-flex justify-content-center">
+					<div class="col col-sm-6 col-md-4 col-lg-3 col-xl-2 d-flex justify-content-center no-margin">
 						<?php
 						require "contents/game.php";
 						?>
 					</div>
-					<div class="col-sm">
+					<div class="col col-sm-6 col-md-4 col-lg-3 col-xl-2 d-flex justify-content-center">
 
 						<table class="text-center">
 
 							<tr>
 								<td>
-									<div class="container">
-										<div class="fw-bold ">NEXT BLOCK</div>
-										<table>
+									<div class="mt-2">
+										<div class="fw-bold ">Next Block</div>
+										<table class="mx-auto">
 											<?php
 												for($i = 0; $i < 4; $i++){
 													?>
@@ -88,10 +91,10 @@
 
 								<tr>
 									<td>
-										<button type="submit" class="btn btn-outline-danger mt-4" name="rotate-ccw">
+										<button type="submit" class="btn btn-outline-danger mt-4 btn-sm" name="rotate-ccw">
 											<i class="fa-solid fa-rotate-left"></i>
 										</button>
-										<button type="submit" class="btn btn-outline-danger mt-4" name="rotate-cw">
+										<button type="submit" class="btn btn-outline-danger mt-4 btn-sm" name="rotate-cw">
 											<i class="fa-solid fa-rotate-right"></i>
 										</button>
 									</td>
@@ -99,13 +102,13 @@
 								
 								<tr>
 									<td>
-										<button type="submit" class="btn btn-outline-danger" name="left">
+										<button type="submit" class="btn btn-outline-danger btn-sm" name="left">
 											<i class="fa-solid fa-arrow-left"></i>
 										</button>
 										<button type="submit" class="btn btn-outline-danger btn-sm" name="stay">
 											<i class="fa-solid fa-arrow-down"></i>
 										</button>
-										<button type="submit" class="btn btn-outline-danger" name="right">
+										<button type="submit" class="btn btn-outline-danger btn-sm" name="right">
 											<i class="fa-solid fa-arrow-right"></i>
 										</button>
 									</td>
@@ -113,7 +116,7 @@
 
 								<tr>
 									<td>
-										<button type="submit" class="btn btn-outline-danger" name="down">
+										<button type="submit" class="btn btn-outline-danger btn-sm" name="down">
 											<i class="fa-solid fa-arrow-down"></i><i class="fa-solid fa-arrow-down"></i>
 										</button>
 									</td>
@@ -131,7 +134,7 @@
 							<tr>
 								<td>
 									<a href="index.php">
-										<button type="button" class="btn btn-outline-secondary mt-3">RESET</button>
+										<button type="button" class="btn btn-outline-secondary mt-3">Reset</button>
 									</a>
 								</td>
 							</tr>
@@ -161,7 +164,7 @@
 			<?php
 			if($game_over){
 			?>
-			<h2 class="text-center text-danger my-2">GAME OVER</h2>
+			<h2 class="text-center text-danger my-2">Game Over</h2>
 			<?php
 			}
 			?>

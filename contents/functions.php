@@ -1,9 +1,7 @@
 <?php
 		function checkCSRF($csrf_token){
 				if ($csrf_token != $_SESSION['csrf_token']) {
-						?>
-						<p class="text-danger fw-bold text-center">Invalid Request</p>
-						<?php
+						header("location: index.php");
 						exit();
 				}
 		}

@@ -14,19 +14,19 @@
 </head>
 
 <body>
-    <div class="container mx-auto">
+    <div class="container mx-auto site-container">
 
 				<div class="row mt-3">
-						<div class="col col-sm-12 col-md-6 mx-auto bg-info rounded">
-								<a href="index.php" style="text-decoration: none;">
-										<h1 class="text-center my-3 text-white h1">Simple Games</h1>
+						<div class="col col-sm-12 mx-auto bg-info rounded">
+								<a href="index.php" class="text-decoration-none">
+										<h1 class="text-center my-3 text-white h2">Simple Games</h1>
 								</a>
 						</div>
 				</div>
         
         <div class="row mt-3 d-flex justify-content-center">
-            <div class="col-12 col-sm-6 col-md-3 text-center mt-3 d-flex justify-content-center">
-								<div class="card">
+            <div class="col-12 col-sm-6 text-center mt-3 d-flex justify-content-center">
+								<div class="card card-index">
                 		<a href="highlow/index.php" class="text-decoration-none link-hover">
 												<img class="card-img-top" src="img/highlow.png" alt="High and Low">
 												<div class="card-body">
@@ -35,8 +35,8 @@
 										</a>
 								</div>
             </div>
-            <div class="col-12 col-sm-6 col-md-3 text-center mt-3 d-flex justify-content-center">
-								<div class="card">
+            <div class="col-12 col-sm-6 text-center mt-3 d-flex justify-content-center">
+								<div class="card card-index">
                 		<a href="four/index.php" class="text-decoration-none link-hover">
 												<img class="card-img-top" src="img/four.png" alt="Four Blocks">
 												<div class="card-body">
@@ -48,7 +48,7 @@
         </div>
 
         <div class="row">
-            <div class="col col-sm-12 col-md-6 mx-auto">
+            <div class="col col-sm-12 mx-auto">
                 <a href="ranking.php" class="btn btn-warning text-white form-control mt-3">High Score Ranking</a>
             </div>
         </div>

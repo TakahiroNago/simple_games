@@ -1,5 +1,9 @@
-.card {
-	width: 300px;
+.card-index {
+	max-width: 300px;
+}
+
+.card-user {
+	max-width: 350px;
 }
 
 .link-hover:hover {
@@ -8,7 +12,15 @@
 	transition: 0.4s;
 }
 
+.site-container {
+	max-width: 685px;
+}
+
 .no-margin {
 	margin: 0;
 	padding: 0;
+}
+
+.card-highlow {
+	max-width: 200px;
 }

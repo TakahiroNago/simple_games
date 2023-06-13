@@ -119,7 +119,7 @@
                 </table>
             </div>
         </div>
-				<a href="index.php" class="btn btn-secondary float-end">TOP PAGE</a>
+				<a href="index.php" class="btn btn-secondary float-end">Top Page</a>
 
     </div>
 
