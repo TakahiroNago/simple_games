@@ -145,7 +145,7 @@
 				$next_block_display = getNextBlock($next_block_type);
 			}
 				
-		} // end of if(isset($_POST['***']))
+		} // end of if(isset($_POST['***'])) in else{}
 	}
 ?>
 
